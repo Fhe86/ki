@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KI-Tools für die Schule</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --paper: #fafaf7;
+    --card: #ffffff;
+    --border: #e4e0d8;
+    --accent-recherche: #2f6690;
+    --accent-praesentation: #7a5195;
+    --accent-mathe: #2e8b57;
+    --accent-fun: #c1440e;
+    --muted: #6b6b63;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.5;
+  }
+
+  .wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 4rem;
+  }
+
+  header {
+    margin-bottom: 2rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+    margin: 0 0 0.3rem;
+  }
+
+  header p.sub {
+    color: var(--muted);
+    margin: 0;
+    font-size: 1.05rem;
+  }
+
+  .download-btn {
+    display: inline-block;
+    margin-top: 1.2rem;
+    padding: 0.6rem 1.2rem;
+    background: var(--ink);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    cursor: pointer;
+  }
+
+  .download-btn:hover { opacity: 0.85; }
+
+  .auftrag {
+    background: #fff7e6;
+    border: 1px solid #e8d9ae;
+    border-left: 6px solid #c1440e;
+    border-radius: 10px;
+    padding: 1.4rem 1.6rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .auftrag h2 {
+    margin: 0 0 0.6rem;
+    font-size: 1.2rem;
+  }
+
+  .auftrag ul {
+    margin: 0.6rem 0 0.8rem;
+    padding-left: 1.3rem;
+  }
+
+  .auftrag p.note {
+    margin: 0.6rem 0 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+
+  section.category {
+    margin-bottom: 2.6rem;
+  }
+
+  section.category h2 {
+    font-size: 1.3rem;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 0.4rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.1rem;
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+
+  .card .icon {
+    font-size: 2.1rem;
+    line-height: 1;
+  }
+
+  .card h3 {
+    margin: 0;
+    font-size: 1.08rem;
+  }
+
+  .card p.desc {
+    margin: 0;
+    font-size: 0.95rem;
+  }
+
+  .card .basics {
+    font-size: 0.86rem;
+    color: var(--muted);
+    background: var(--paper);
+    border-radius: 8px;
+    padding: 0.55rem 0.7rem;
+    margin-top: 0.2rem;
+  }
+
+  .card .basics strong {
+    color: var(--ink);
+  }
+
+  .card a.link {
+    margin-top: auto;
+    align-self: flex-start;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    color: #fff;
+  }
+
+  .recherche .link { background: var(--accent-recherche); }
+  .praesentation .link { background: var(--accent-praesentation); }
+  .mathe .link { background: var(--accent-mathe); }
+  .fun .link { background: var(--accent-fun); }
+
+  .recherche h2 { border-color: var(--accent-recherche); }
+  .praesentation h2 { border-color: var(--accent-praesentation); }
+  .mathe h2 { border-color: var(--accent-mathe); }
+  .fun h2 { border-color: var(--accent-fun); }
+
+  footer {
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-top: 2rem;
+  }
+
+  @media print {
+    .download-btn { display: none; }
+    body { background: #fff; }
+    .card { break-inside: avoid; }
+    a.link::after {
+      content: " (" attr(href) ")";
+      font-weight: 400;
+      color: #000;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>KI-Tools für die Schule</h1>
+    <p class="sub">Zwölf Tools zur Auswahl. Sucht euch zu zweit eins aus und probiert es selbst aus.</p>
+    <button class="download-btn" onclick="window.print()">Als PDF herunterladen</button>
+  </header>
+
+  <div class="auftrag">
+    <h2>Arbeitsauftrag</h2>
+    <p>Sucht euch zu zweit eines der Tools unten aus. Probiert es in Ruhe selbst aus. Danach stellt ihr den anderen Teams kurz vor:</p>
+    <ul>
+      <li>Wie funktioniert das Tool? Was gebt ihr ein, was bekommt ihr raus?</li>
+      <li>Wie könnte man es in der Schule oder im Alltag sinnvoll einsetzen?</li>
+    </ul>
+    <p class="note">Eine kurze mündliche Vorstellung reicht, keine Folien nötig. Zeigt das Tool gern direkt am Bildschirm oder Handy.</p>
+  </div>
+
+  <section class="category recherche">
+    <h2>Recherche &amp; Lernen</h2>
+    <div class="grid">
+
+      <div class="card">
+        <div class="icon">📓</div>
+        <h3>NotebookLM</h3>
+        <p class="desc">Ihr ladet eigene Texte oder PDFs hoch. Die KI beantwortet Fragen nur dazu und fasst zusammen.</p>
+        <div class="basics"><strong>Los geht's:</strong> notebooklm.google.com, Google-Konto nötig (Schul-Konto reicht). Bringt einen eigenen Text oder ein PDF mit.</div>
+        <a class="link" href="https://notebooklm.google.com" target="_blank" rel="noopener">Tool öffnen</a>
+      </div>
+
+      <div class="card">
+        <div class="icon">🔎</div>
+        <h3>Perplexity</h3>
+        <p class="desc">Eine Suchmaschine, die eure Frage direkt beantwortet und die Quellen dazu anzeigt.</p>
+        <div class="basics"><strong>Los geht's:</strong> perplexity.ai, keine Anmeldung nötig. Einfach eine Frage eintippen.</div>
+        <a class="link" href="https://www.perplexity.ai" target="_blank" rel="noopener">Tool öffnen</a>
+      </div>
+
+      <div class="card">
+        <div class="icon">📄</div>
+        <h3>ChatPDF</h3>
+        <p class="desc">Ihr ladet ein PDF hoch und stellt gezielte Fragen dazu, statt es komplett durchzulesen.</p>
+        <div class="basics"><strong>Los geht's:</strong> chatpdf.com, PDF hochladen. Für mehr als ein bis zwei Dokumente ist ein kostenloses Konto nötig.</div>
+        <a class="link" href="https://www.chatpdf.com" target="_blank" rel="noopener">Tool öffnen</a>
+      </div>
+
+      <div class="card">
+        <div class="icon">🎓</div>
+        <h3>Knowunity</h3>
+        <p class="desc">Die KI-Funktion SchoolGPT beantwortet Fragen, scannt Hausaufgaben per Foto und erstellt Quiz oder Karteikarten.</p>
+        <div class="basics"><strong>Los geht's:</strong> App im App Store oder bei Google Play laden, kostenloses Konto anlegen. Bringt ein Handy mit.</div>
+        <a class="link" href="https://knowunity.de" target="_blank" rel="noopener">Zur Webseite</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="category praesentation">
+    <h2>Präsentation &amp; Gestaltung</h2>
+    <div class="grid">
+
+      <div class="card">
+        <div class="icon">📊</div>
+        <h3>Gamma</h3>
+        <p class="desc">Aus euren Stichpunkten baut die KI eine fertige Präsentation mit Layout.</p>
+        <div class="basics"><strong>Los geht's:</strong> gamma.app, Anmeldung mit Google oder E-Mail. Stichpunkte eingeben, Folien generieren lassen.</div>
+        <a class="link" href="https://gamma.app" target="_blank" rel="noopener">Tool öffnen</a>
+      </div>
+
+      <div class="card">
+        <div class="icon">🗺️</div>
+        <h3>Napkin AI</h3>
+        <p class="desc">Ihr fügt einen Text ein, die KI macht daraus ein Diagramm oder Schaubild.</p>
+        <div class="basics"><strong>Los geht's:</strong> napkin.ai, Konto anlegen. Text einfügen und automatisch visualisieren lassen.</div>
+        <a class="link" href="https://www.napkin.ai" target="_blank" rel="noopener">Tool öffnen</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="category mathe">
+    <h2>Mathe &amp; Sprache</h2>
+    <div class="grid">
+
+      <div class="card">
+        <div class="icon">🧮</div>
+        <h3>Wolfram Alpha</h3>
+        <p class="desc">Löst Rechenaufgaben und naturwissenschaftliche Probleme mit Schritt-für-Schritt-Lösung.</p>
+        <div class="basics"><strong>Los geht's:</strong> wolframalpha.com, keine Anmeldung nötig. Aufgabe eingeben, Lösung erscheint sofort.</div>
+        <a class="link" href="https://www.wolframalpha.com" target="_blank" rel="noopener">Tool öffnen</a>
+      </div>
+
+      <div class="card">
+        <div class="icon">➗</div>
+        <h3>MathGPT</h3>
+        <p class="desc">Löst Aufgaben aus Algebra, Analysis, Chemie, Physik und Statistik mit Schritt-für-Schritt-Erklärung und Video-Walkthrough.</p>
+        <div class="basics"><strong>Los geht's:</strong> math-gpt.org, läuft direkt im Browser. Einfache Erklärungen kostenlos, für unbegrenzte Nutzung ist ein Konto/Abo nötig.</div>
+        <a class="link" href="https://math-gpt.org" target="_blank" rel="noopener">Tool öffnen</a>
+      </div>
+
+      <div class="card">
+        <div class="icon">🌐</div>
+        <h3>DeepL</h3>
+        <p class="desc">Übersetzt Texte deutlich genauer als die meisten anderen Übersetzer.</p>
+        <div class="basics"><strong>Los geht's:</strong> deepl.com, keine Anmeldung nötig. Text einfügen, Sprache wählen.</div>
+        <a class="link" href="https://www.deepl.com" target="_blank" rel="noopener">Tool öffnen</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="category fun">
+    <h2>Fun &amp; Kreativ</h2>
+    <div class="grid">
+
+      <div class="card">
+        <div class="icon">🎵</div>
+        <h3>Suno</h3>
+        <p class="desc">Aus einer Textbeschreibung entsteht ein kompletter Song mit Melodie und Gesang.</p>
+        <div class="basics"><strong>Los geht's:</strong> suno.com, Konto anlegen. Simple Mode wählen, Prompt schreiben, auf Create klicken.</div>
+        <a class="link" href="https://suno.com" target="_blank" rel="noopener">Tool öffnen</a>
+      </div>
+
+      <div class="card">
+        <div class="icon">🔊</div>
+        <h3>ElevenLabs</h3>
+        <p class="desc">Verwandelt Text in eine natürliche KI-Stimme, erzeugt Sound-Effekte und sogar Musik, alles in einem Tool.</p>
+        <div class="basics"><strong>Los geht's:</strong> elevenlabs.io, kostenloses Konto anlegen. 10.000 Credits pro Monat, reicht locker für die Vorstellung.</div>
+        <a class="link" href="https://elevenlabs.io" target="_blank" rel="noopener">Tool öffnen</a>
+      </div>
+
+      <div class="card">
+        <div class="icon">🎞️</div>
+        <h3>Kling AI</h3>
+        <p class="desc">Ladet ein Foto hoch, die KI animiert es zu einem kurzen Video, das Bild bekommt Bewegung.</p>
+        <div class="basics"><strong>Los geht's:</strong> kling.ai, kostenloses Konto anlegen. 66 Credits pro Tag, reicht für mehrere kurze Videos. Kostenlose Videos haben ein Wasserzeichen.</div>
+        <a class="link" href="https://kling.ai" target="_blank" rel="noopener">Tool öffnen</a>
+      </div>
+
+      <div class="card">
+        <div class="icon">🖼️</div>
+        <h3>Craiyon</h3>
+        <p class="desc">Erzeugt aus einer Textbeschreibung ein Bild.</p>
+        <div class="basics"><strong>Los geht's:</strong> craiyon.com, keine Anmeldung nötig. Beschreibung eingeben, kurz warten.</div>
+        <a class="link" href="https://www.craiyon.com" target="_blank" rel="noopener">Tool öffnen</a>
+      </div>
+
+      <div class="card">
+        <div class="icon">🎬</div>
+        <h3>CapCut</h3>
+        <p class="desc">Videoschnitt mit KI-Funktionen wie automatischen Untertiteln.</p>
+        <div class="basics"><strong>Los geht's:</strong> capcut.com oder App laden, Konto anlegen. Bringt ein kurzes eigenes Handyvideo mit. Zeigt nur drei Funktionen: Schnitt, Text-Overlay, automatische Untertitel.</div>
+        <a class="link" href="https://www.capcut.com" target="_blank" rel="noopener">Tool öffnen</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    Stand: Juli 2026. Kostenlose Versionen können sich ändern, bei Problemen einfach ein anderes Tool aus der Liste wählen.
+  </footer>
+
+</div>
+</body>
+</html>
